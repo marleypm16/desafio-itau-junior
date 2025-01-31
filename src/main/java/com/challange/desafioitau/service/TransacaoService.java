@@ -14,5 +14,12 @@ public class TransacaoService {
         transacoes.add(transacao);
         return transacao;
     }
+    //para desenvolvimento
+    public List<Transacao> listarTransacoes(){
+        return transacoes;
+    }
+    public void deletarTransacao(){
+        transacoes.clear();
+    }
 
 }
