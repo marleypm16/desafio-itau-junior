@@ -1,7 +1,6 @@
 package com.challange.desafioitau.service;
 
 import com.challange.desafioitau.model.Transacao;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,10 +8,11 @@ import java.util.List;
 
 @Service
 public class TransacaoService {
-     private List<Transacao> transacaos  = new ArrayList<Transacao>();
+    private final List<Transacao> transacoes = new ArrayList<>();
 
-     public List<Transacao> salvarTransacao(Transacao transacao){
-         transacaos.add(transacao);
-         return transacaos;
+    public Transacao salvarTransacao(Transacao transacao) {
+        transacoes.add(transacao);
+        return transacao;
     }
+
 }
