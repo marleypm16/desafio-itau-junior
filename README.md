@@ -127,7 +127,7 @@ A função `calcularEstatisticas` tem uma complexidade de tempo de **\(O(n)\)**,
   - Status `200 OK` em casso de sucesso
 ### 3. **Recuperar Estatísticas**:
 - **Método**: `GET`
-- **URL**: `/estatisticas`
+- **URL**: `/estatisticas?intervaloDeTempoEmMinutos=1`
 - **Resposta**:
   ```json
   {
