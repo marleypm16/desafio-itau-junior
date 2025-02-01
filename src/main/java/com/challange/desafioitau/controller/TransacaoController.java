@@ -14,8 +14,11 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/transacao")
 public class TransacaoController {
+    private final TransacaoService transacaoService;
     @Autowired
-    private TransacaoService transacaoService;
+    public TransacaoController(TransacaoService transacaoService) {
+        this.transacaoService = transacaoService;
+    }
     @PostMapping
     public  ResponseEntity<Transacao>criarTransacao(@RequestBody Transacao transacao) {
         if (transacao.getDataHora() == null || transacao.getValor() == null){
